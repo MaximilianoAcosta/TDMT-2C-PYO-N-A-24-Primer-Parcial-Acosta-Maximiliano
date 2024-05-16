@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3917117205777910012}
   - component: {fileID: 2023790199612495450}
   - component: {fileID: 2229876502688618135}
+  - component: {fileID: 7988070703364357529}
   m_Layer: 0
   m_Name: Player3
   m_TagString: Untagged
@@ -46,11 +47,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef3a84f056828f241896bcd331ed61ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _UI: {fileID: 7988070703364357529}
+  _EntityMovement: {fileID: 2229876502688618135}
   _MaxHealth: 15
   _Health: 15
-  _speed: 4
-  _damage: 1
-  _healDone: 2
+  _Speed: 4
+  _Damage: 1
+  _RangeDamage: 3
+  _HealDone: 2
 --- !u!114 &2229876502688618135
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64,6 +68,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gridManager: {fileID: 0}
+--- !u!114 &7988070703364357529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1970832750280963082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a02eeee30b435fc4eb1fcb2fc708b4f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HpValue: {fileID: 0}
 --- !u!1 &5767737644015251849
 GameObject:
   m_ObjectHideFlags: 0

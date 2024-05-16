@@ -2,42 +2,61 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerBehaviour : MonoBehaviour
+public class PlayerBehaviour : MonoBehaviour, ICharacter
 {
-    [SerializeField] PlayerUI UI;
-    [SerializeField] EntityMovement entityMovement;
+    [SerializeField] PlayerUI _UI;
+    [SerializeField] EntityMovement _EntityMovement;
 
-    [SerializeField] List<GameObject> CloseEnemies;
     [SerializeField] private int _MaxHealth;
     [SerializeField] int _Health;
-    [SerializeField] int _speed;
-    [SerializeField] int _damage;
-    [SerializeField] int _healDone;
-    
-    public void Attack(EnemyBehaviour character)
+    [SerializeField] int _Speed;
+    [SerializeField] int _Damage;
+    [SerializeField] int _RangeDamage;
+    [SerializeField] int _HealDone;
+    public void Attack(ICharacter character, int damage)
     {
-        character.takeDamage(_damage);
+        character.TakeDamage(damage);
     }
 
-    public void onSelfHeal()
+    public void OnSelfHeal()
     {
-        _Health += _healDone;
+        Heal(_HealDone);
+    }
+    public void Heal(int ammount)
+    {
+        _Health += ammount;
         if (_Health > _MaxHealth) { _Health = _MaxHealth; }
-        UI.SetHpText(_Health);
+        _UI.SetHpText(_Health);
     }
 
-    public void takeDamage(int damage)
+    public void TakeDamage(int damage)
     {
         _Health -= damage;
-        UI.SetHpText(_Health);
+        _UI.SetHpText(_Health);
+        if (_Health <= 0)
+        {
+            gameObject.SetActive(false);
+        }
     }
-    public int getSpeed() 
+    public int GetSpeed() 
     { 
-        return _speed;
+        return _Speed;
     }
 
-    public Vector2 getPosition()
+    public Vector2 GetPosition()
     {
-        return entityMovement.GetPositionOnGrid();
+        return _EntityMovement.GetPositionOnGrid();
+    }
+    public int GetHealthDone()
+    {
+        return _HealDone;
+    }
+    public int GetDamage()
+    {
+        return _Damage;
+    }
+    public int GetRangeDamage() 
+    {
+        return _RangeDamage;
     }
 }

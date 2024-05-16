@@ -8,6 +8,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 929671617230987669, guid: 91402ea48e17a3e4697b7e22d5a63b8a, type: 3}
+      propertyPath: _UI
+      value: 
+      objectReference: {fileID: 4520543305855262866}
+    - target: {fileID: 929671617230987669, guid: 91402ea48e17a3e4697b7e22d5a63b8a, type: 3}
+      propertyPath: _Range
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 929671617230987669, guid: 91402ea48e17a3e4697b7e22d5a63b8a, type: 3}
+      propertyPath: _Speed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 929671617230987669, guid: 91402ea48e17a3e4697b7e22d5a63b8a, type: 3}
+      propertyPath: _Damage
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 929671617230987669, guid: 91402ea48e17a3e4697b7e22d5a63b8a, type: 3}
+      propertyPath: _RangeDamage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 929671617230987669, guid: 91402ea48e17a3e4697b7e22d5a63b8a, type: 3}
+      propertyPath: _EntityMovement
+      value: 
+      objectReference: {fileID: 4087553646833933353}
     - target: {fileID: 1944082981738922549, guid: 91402ea48e17a3e4697b7e22d5a63b8a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -66.3
@@ -62,3 +86,25 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91402ea48e17a3e4697b7e22d5a63b8a, type: 3}
+--- !u!114 &4087553646833933353 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1783962016767573703, guid: 91402ea48e17a3e4697b7e22d5a63b8a, type: 3}
+  m_PrefabInstance: {fileID: 2339620427625390830}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1694b9e31f8d32246a4d20d981fe17f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4520543305855262866 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2216952225024836220, guid: 91402ea48e17a3e4697b7e22d5a63b8a, type: 3}
+  m_PrefabInstance: {fileID: 2339620427625390830}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a02eeee30b435fc4eb1fcb2fc708b4f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

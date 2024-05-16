@@ -146,14 +146,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38df9fb1afbb8bc42b8f71bbada2b6fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UI: {fileID: 2216952225024836220}
-  entityMovement: {fileID: 1783962016767573703}
+  _UI: {fileID: 2216952225024836220}
+  _EntityMovement: {fileID: 1783962016767573703}
   _MaxHealth: 10
   _Health: 10
-  _speed: 1
-  _damage: 3
-  rangeDamage: 1
-  range: 3
+  _Speed: 1
+  _Damage: 3
+  _RangeDamage: 1
+  _Range: 3
 --- !u!114 &2216952225024836220
 MonoBehaviour:
   m_ObjectHideFlags: 0

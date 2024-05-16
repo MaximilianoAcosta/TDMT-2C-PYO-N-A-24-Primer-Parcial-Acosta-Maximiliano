@@ -1,18 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using static UnityEditor.PlayerSettings;
 
 public class EntityMovement : MonoBehaviour
 {
     [SerializeField] GridManager gridManager;
     private Vector2 _PositionOnGrid;
-
     public void SetPositionOnGrid(Vector2 pos)
     {
         _PositionOnGrid = pos;
     }
-    public void TryMovement(Vector2 direction)
+    public bool TryMovement(Vector2 direction)
     {
         Vector2 newPos = _PositionOnGrid + direction;
         Tile thisTile = gridManager.GetTileAtPosition(_PositionOnGrid);  
@@ -24,11 +24,14 @@ public class EntityMovement : MonoBehaviour
             SetPositionOnGrid(newPos);
             transform.position = newTile.transform.position;
             newTile.setIfHasEntityOn(true);
-            PlayerMovement.reduceNumberOfMoves();
+            PlayerMovement.ReduceNumberOfMoves();
+            return true;
         }
+        return false;
     }
     public Vector2 GetPositionOnGrid()
     {
         return _PositionOnGrid;
     }
+ 
 }
