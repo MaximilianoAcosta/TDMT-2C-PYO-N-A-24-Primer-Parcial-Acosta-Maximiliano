@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
+
         StartCoroutine(LateStart(startWaitTime));
     }
     IEnumerator LateStart(float waitTime)

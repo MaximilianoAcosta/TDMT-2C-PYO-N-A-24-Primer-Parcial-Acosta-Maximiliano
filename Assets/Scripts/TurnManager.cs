@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.TextCore.Text;
@@ -12,12 +13,16 @@ public class TurnManager : MonoBehaviour
     [SerializeField] int TurnCount;
     [SerializeField] TMP_Text _FinalText;
     [SerializeField] GameObject _TurnArrow;
+    [SerializeField] IntersticialAd _IntersticialAd;
     private static bool _PlayerCanAct;
     private static bool _Lose;
     GameObject _Winner;
 
     private void Start()
     {
+        _Winner = null;
+        _PlayerCanAct = true;
+        _Lose = false;
         TurnCount = 0;
         CharacterInTurn(Characters[TurnCount]);
     }
@@ -33,12 +38,14 @@ public class TurnManager : MonoBehaviour
         {
             _FinalText.enabled = true;
             _FinalText.SetText("Your group lost");
+            showAndroidAd();
             return;
         }
         if (_Winner != null)
         {
             _FinalText.enabled = true;
             _FinalText.SetText("The Winner is " + _Winner.name);
+            showAndroidAd();
             return;
         }
         if (character.activeSelf)
@@ -60,8 +67,14 @@ public class TurnManager : MonoBehaviour
         {
             ChangeTurn();
         }
-        //CheckLoseCondition();
 
+    }
+
+    private void showAndroidAd()
+    {
+#if UNITY_ANDROID
+        _IntersticialAd.ShowAd();
+#endif
     }
 
     public void OnChangeTurn(InputAction.CallbackContext context)
@@ -74,6 +87,7 @@ public class TurnManager : MonoBehaviour
     }
     public void ChangeTurn()
     {
+        if (_Lose || _Winner != null) { return; }
         CheckLoseCondition();
         TurnCount++;
         if (TurnCount == Characters.Count) { TurnCount = 0; }
