@@ -1,3 +1,4 @@
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,9 +9,11 @@ public class HealButton : MonoBehaviour
     [SerializeField] int _HealDistance;
     PlayerBehaviour _Healer;
     PlayerBehaviour _Healed;
+    private Image _TargetImage;
 
     private void Start()
     {
+        _TargetImage = GetComponent<Image>();
         _Healer = GameObject.Find(_HealerName).GetComponent<PlayerBehaviour>();
         _Healed = GameObject.Find(_HealedName).GetComponent<PlayerBehaviour>();
 
@@ -54,6 +57,19 @@ public class HealButton : MonoBehaviour
         {
             TurnManager.ConsumeAction();
             _Healer.OnSelfHeal();
+        }
+    }
+    public void OnMove()
+    {
+        Vector2 attackerPos = _Healer.GetPosition();
+        Vector2 defenderPos = _Healed.GetPosition();
+        if (Mathf.Abs(defenderPos.x - attackerPos.x) <= _HealDistance && Mathf.Abs(defenderPos.y - attackerPos.y) <= _HealDistance && _Healed.GetIsAlive())
+        {
+            _TargetImage.enabled = true;
+        }
+        else
+        {
+            _TargetImage.enabled = false;
         }
     }
 

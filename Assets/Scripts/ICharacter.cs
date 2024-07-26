@@ -9,4 +9,5 @@ public interface ICharacter
     Vector2 GetPosition();
     int GetDamage();
     int GetRangeDamage();
+    bool GetIsAlive();
 }

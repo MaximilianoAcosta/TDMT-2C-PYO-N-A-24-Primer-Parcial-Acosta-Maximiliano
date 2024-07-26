@@ -1,15 +1,18 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AttackButton : MonoBehaviour
 {
     [SerializeField] string _AttackerName;
     [SerializeField] string _DefenderName;
     [SerializeField] int _AttackDistance;
+    private Image _TargetImage;
     ICharacter _Attacker;
     ICharacter _Defender;
 
     private void Start()
     {
+        _TargetImage = GetComponent<Image>();
         _Attacker = GameObject.Find(_AttackerName).GetComponent<ICharacter>();
         _Defender = GameObject.Find(_DefenderName).GetComponent<ICharacter>();
     }
@@ -21,7 +24,7 @@ public class AttackButton : MonoBehaviour
             int damage;
             Vector2 attackerPos = _Attacker.GetPosition();
             Vector2 defenderPos = _Defender.GetPosition();
-            
+
             if (Mathf.Abs(defenderPos.x - attackerPos.x) <= _AttackDistance && Mathf.Abs(defenderPos.y - attackerPos.y) <= _AttackDistance)
             {
                 if (Mathf.Abs(defenderPos.x - attackerPos.x) <= 1 && Mathf.Abs(defenderPos.y - attackerPos.y) <= 1)
@@ -41,6 +44,19 @@ public class AttackButton : MonoBehaviour
             {
                 Debug.Log("Out of range");
             }
+        }
+    }
+    public void OnMove()
+    {
+        Vector2 attackerPos = _Attacker.GetPosition();
+        Vector2 defenderPos = _Defender.GetPosition();
+        if (Mathf.Abs(defenderPos.x - attackerPos.x) <= _AttackDistance && Mathf.Abs(defenderPos.y - attackerPos.y) <= _AttackDistance && _Defender.GetIsAlive())
+        {
+            _TargetImage.enabled = true;
+        }
+        else
+        {
+            _TargetImage.enabled = false;
         }
     }
 }

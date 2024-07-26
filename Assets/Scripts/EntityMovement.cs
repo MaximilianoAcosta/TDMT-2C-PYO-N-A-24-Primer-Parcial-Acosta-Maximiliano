@@ -20,6 +20,7 @@ public class EntityMovement : MonoBehaviour
         newTile = gridManager.GetTileAtPosition(newPos);
         if (newTile != null && !newTile.CheckIfHasEntityOn())
         {
+      
             thisTile.setIfHasEntityOn(false);
             SetPositionOnGrid(newPos);
             transform.position = newTile.transform.position;

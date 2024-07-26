@@ -53,6 +53,8 @@ SpriteAtlas:
     - {fileID: 2800000, guid: adcefd19250bfa64f908ba0972b37977, type: 3}
     - {fileID: 2800000, guid: d9f82f41374798847a7adbdb7e49b026, type: 3}
     - {fileID: 2800000, guid: 867dfd716d241604f913f4cfa43d8661, type: 3}
+    - {fileID: 2800000, guid: 3669f3270cc8742469328c357f66d1c7, type: 3}
+    - {fileID: 2800000, guid: 32d5e76a3451bb043aa9e7a09305dfd7, type: 3}
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
@@ -61,8 +63,10 @@ SpriteAtlas:
     - 867dfd716d241604f913f4cfa43d8661: 21300000
     - 2879d9e2952f3384a9e9e8d0fe10a821: 21300000
     - d9b9c37628fa9394fa679c3412c8d7aa: 21300000
+    - 3669f3270cc8742469328c357f66d1c7: 21300000
     - adcefd19250bfa64f908ba0972b37977: 21300000
     - 253f172a016649c4ba65bf4868ba80b4: 21300000
+    - 32d5e76a3451bb043aa9e7a09305dfd7: 21300000
     - 543c555fb9455e245a10ab2879c994fa: 21300000
     - 03ef428fc5cee5242afe01543a7f9c03: 21300000
   m_MasterAtlas: {fileID: 0}
@@ -71,8 +75,10 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 867dfd716d241604f913f4cfa43d8661, type: 3}
   - {fileID: 21300000, guid: 2879d9e2952f3384a9e9e8d0fe10a821, type: 3}
   - {fileID: 21300000, guid: d9b9c37628fa9394fa679c3412c8d7aa, type: 3}
+  - {fileID: 21300000, guid: 3669f3270cc8742469328c357f66d1c7, type: 3}
   - {fileID: 21300000, guid: adcefd19250bfa64f908ba0972b37977, type: 3}
   - {fileID: 21300000, guid: 253f172a016649c4ba65bf4868ba80b4, type: 3}
+  - {fileID: 21300000, guid: 32d5e76a3451bb043aa9e7a09305dfd7, type: 3}
   - {fileID: 21300000, guid: 543c555fb9455e245a10ab2879c994fa, type: 3}
   - {fileID: 21300000, guid: 03ef428fc5cee5242afe01543a7f9c03, type: 3}
   m_PackedSpriteNamesToIndex:
@@ -80,8 +86,10 @@ SpriteAtlas:
   - range
   - enemy1
   - fighter
+  - pngwing.com(1)
   - grid_cell
   - button
+  - paw 1
   - active
   - enemy2
   m_RenderDataMap: {}

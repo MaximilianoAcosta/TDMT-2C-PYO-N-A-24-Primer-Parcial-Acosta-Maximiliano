@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.TextCore.Text;
 
 public class TurnManager : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class TurnManager : MonoBehaviour
     [SerializeField] EnemyIaTurn _EnemyIaTurn;
     [SerializeField] int TurnCount;
     [SerializeField] TMP_Text _FinalText;
+    [SerializeField] GameObject _TurnArrow;
     private static bool _PlayerCanAct;
     private static bool _Lose;
     GameObject _Winner;
@@ -18,6 +20,12 @@ public class TurnManager : MonoBehaviour
     {
         TurnCount = 0;
         CharacterInTurn(Characters[TurnCount]);
+    }
+    private void Update()
+    {
+        if (_PlayerCanAct) { _TurnArrow.GetComponentInChildren<SpriteRenderer>().color = Color.black; }
+        else { _TurnArrow.GetComponentInChildren<SpriteRenderer>().color= Color.red; }
+        _TurnArrow.transform.position = Characters[TurnCount].transform.position;    
     }
     private void CharacterInTurn(GameObject character)
     {
@@ -35,6 +43,7 @@ public class TurnManager : MonoBehaviour
         }
         if (character.activeSelf)
         {
+      
             if (character.CompareTag("Player"))
             {
                 _PlayerCanAct = true;
@@ -51,7 +60,7 @@ public class TurnManager : MonoBehaviour
         {
             ChangeTurn();
         }
-        CheckLoseCondition();
+        //CheckLoseCondition();
 
     }
 
@@ -60,13 +69,12 @@ public class TurnManager : MonoBehaviour
  
         if (context.performed)
         {
-            TurnCount++;
-            if (TurnCount == Characters.Count) { TurnCount = 0; }
-            CharacterInTurn(Characters[TurnCount]);
+            ChangeTurn();
         }
     }
     public void ChangeTurn()
     {
+        CheckLoseCondition();
         TurnCount++;
         if (TurnCount == Characters.Count) { TurnCount = 0; }
         CharacterInTurn(Characters[TurnCount]);
@@ -83,6 +91,7 @@ public class TurnManager : MonoBehaviour
 
     private void CheckLoseCondition()
     {
+        Debug.Log("Checking lose condition");
         List<GameObject> AliveEnemies = new();
         List<GameObject> AlivePlayers = new();
         foreach (GameObject entity in Characters)
@@ -92,25 +101,33 @@ public class TurnManager : MonoBehaviour
                 if (entity.activeSelf)
                 {
                     AliveEnemies.Add(entity);
+
                 }
             }
+        }
+        foreach (GameObject entity in Characters)
+        {
             if (entity.CompareTag("Player"))
             {
                 if (!entity.activeSelf && AliveEnemies.Count > 0)
                 {
-                    
+                    Debug.Log("Lose");
                     _Lose = true;
+                    break;
                 }
                 else if (entity.activeSelf)
                 {
+                    Debug.Log(entity.name + "alive");
                     AlivePlayers.Add(entity);
                 } 
             }
         }
-        if(AlivePlayers.Count == 1)
+        Debug.Log("enemies alive "+AliveEnemies.Count);
+        if (AlivePlayers.Count == 1)
         {
             _Winner = AlivePlayers[0];
         }
+        Debug.Log(_Lose);
     }
 
 }

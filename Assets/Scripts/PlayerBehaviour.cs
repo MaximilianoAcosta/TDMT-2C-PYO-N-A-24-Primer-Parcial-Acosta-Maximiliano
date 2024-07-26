@@ -6,6 +6,7 @@ public class PlayerBehaviour : MonoBehaviour, ICharacter
 {
     [SerializeField] PlayerUI _UI;
     [SerializeField] EntityMovement _EntityMovement;
+    [SerializeField] GridManager gridManager;
 
     [SerializeField] private int _MaxHealth;
     [SerializeField] int _Health;
@@ -13,6 +14,7 @@ public class PlayerBehaviour : MonoBehaviour, ICharacter
     [SerializeField] int _Damage;
     [SerializeField] int _RangeDamage;
     [SerializeField] int _HealDone;
+    private bool _IsAlive = true;
     public void Attack(ICharacter character, int damage)
     {
         character.TakeDamage(damage);
@@ -35,6 +37,9 @@ public class PlayerBehaviour : MonoBehaviour, ICharacter
         _UI.SetHpText(_Health);
         if (_Health <= 0)
         {
+            _IsAlive = false;    
+            Tile thisTile = gridManager.GetTileAtPosition(GetPosition());
+            if (thisTile.CheckIfHasEntityOn()) thisTile.setIfHasEntityOn(false);
             gameObject.SetActive(false);
         }
     }
@@ -58,5 +63,9 @@ public class PlayerBehaviour : MonoBehaviour, ICharacter
     public int GetRangeDamage() 
     {
         return _RangeDamage;
+    }
+    public bool GetIsAlive()
+    {
+        return _IsAlive;
     }
 }
