@@ -43,7 +43,7 @@ public class BannerAd : MonoBehaviour
 
     void ShowBannerAd()
     {
-        Debug.Log(_adUnitId + "BannerShow");
+        Debug.Log(_adUnitId + " BannerShow");
         Advertisement.Banner.Show(_adUnitId);
     }
     public void HideBannerAd()
