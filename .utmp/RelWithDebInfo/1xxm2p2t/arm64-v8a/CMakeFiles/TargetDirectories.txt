@@ -1,0 +1,8 @@
+C:/Users/Maxi/TDMT-2C-PYO-N-A-24 Primer-parcial-Acosta-Maximiliano/.utmp/RelWithDebInfo/1xxm2p2t/arm64-v8a/CMakeFiles/edit_cache.dir
+C:/Users/Maxi/TDMT-2C-PYO-N-A-24 Primer-parcial-Acosta-Maximiliano/.utmp/RelWithDebInfo/1xxm2p2t/arm64-v8a/CMakeFiles/rebuild_cache.dir
+C:/Users/Maxi/TDMT-2C-PYO-N-A-24 Primer-parcial-Acosta-Maximiliano/.utmp/RelWithDebInfo/1xxm2p2t/arm64-v8a/GameActivity/CMakeFiles/game.dir
+C:/Users/Maxi/TDMT-2C-PYO-N-A-24 Primer-parcial-Acosta-Maximiliano/.utmp/RelWithDebInfo/1xxm2p2t/arm64-v8a/GameActivity/CMakeFiles/edit_cache.dir
+C:/Users/Maxi/TDMT-2C-PYO-N-A-24 Primer-parcial-Acosta-Maximiliano/.utmp/RelWithDebInfo/1xxm2p2t/arm64-v8a/GameActivity/CMakeFiles/rebuild_cache.dir
+C:/Users/Maxi/TDMT-2C-PYO-N-A-24 Primer-parcial-Acosta-Maximiliano/.utmp/RelWithDebInfo/1xxm2p2t/arm64-v8a/FramePacing/CMakeFiles/swappywrapper.dir
+C:/Users/Maxi/TDMT-2C-PYO-N-A-24 Primer-parcial-Acosta-Maximiliano/.utmp/RelWithDebInfo/1xxm2p2t/arm64-v8a/FramePacing/CMakeFiles/edit_cache.dir
+C:/Users/Maxi/TDMT-2C-PYO-N-A-24 Primer-parcial-Acosta-Maximiliano/.utmp/RelWithDebInfo/1xxm2p2t/arm64-v8a/FramePacing/CMakeFiles/rebuild_cache.dir

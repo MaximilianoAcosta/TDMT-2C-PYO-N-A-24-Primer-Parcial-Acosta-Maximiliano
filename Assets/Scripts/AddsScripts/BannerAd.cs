@@ -3,14 +3,20 @@ using UnityEngine.Advertisements;
 
 public class BannerAd : MonoBehaviour
 {
-    [SerializeField] BannerPosition _bannerPosition = BannerPosition.BOTTOM_CENTER; 
-    [SerializeField] string _androidAdUnitId = "Banner_Android";
+    [SerializeField] BannerPosition _bannerPosition = BannerPosition.BOTTOM_CENTER;
+    [SerializeField] string _androidAdUnitId;
     private string _adUnitId = null;
 
-    private void Awake()
+    private void Start()
     {
         _adUnitId = _androidAdUnitId;
         Advertisement.Banner.SetPosition(_bannerPosition);
+
+    }
+
+    public void ActivateBanner()
+    {
+        ShowBannerAd();
     }
 
     public void LoadBanner()
@@ -37,8 +43,13 @@ public class BannerAd : MonoBehaviour
 
     void ShowBannerAd()
     {
-        Debug.Log("BannerShow");
+        Debug.Log(_adUnitId + "BannerShow");
         Advertisement.Banner.Show(_adUnitId);
     }
+    public void HideBannerAd()
+    {
+        Advertisement.Banner.Hide();
+    }
+
 }
 

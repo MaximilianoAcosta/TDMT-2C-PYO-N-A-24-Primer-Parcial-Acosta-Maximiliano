@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Advertisements;
 
@@ -12,6 +13,7 @@ public class AdsInitializer : MonoBehaviour, IUnityAdsInitializationListener
     void Awake()
     {
 #if UNITY_ANDROID
+        _gameId = _androidGameId;
         _bannerAd = GetComponent<BannerAd>();
         _intersticialAd = GetComponent<IntersticialAd>();
         InitializeAds();
@@ -20,14 +22,14 @@ public class AdsInitializer : MonoBehaviour, IUnityAdsInitializationListener
 
     public void InitializeAds()
     {
-        _gameId = _androidGameId;
         if (!Advertisement.isInitialized && Advertisement.isSupported)
         {
             Advertisement.Initialize(_gameId, _testMode, this);
+            
         }
     }
 
-
+    
     public void OnInitializationComplete()
     {
         _intersticialAd.LoadAd();
