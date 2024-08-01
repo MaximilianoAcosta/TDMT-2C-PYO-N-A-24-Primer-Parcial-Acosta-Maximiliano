@@ -1,0 +1,21 @@
+# ninja log v5
+36	190	7441633111071215	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	afdcfa160b892165
+10	1404	7441633123164811	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	efef635d17926591
+191	453	7441633112703207	C:/Users/Maxi/TDMT-2C-PYO-N-A-24 Primer-parcial-Acosta-Maximiliano/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/1xxm2p2t/obj/armeabi-v7a/libswappywrapper.so	df7e8c43b54b4065
+6	1092	7441633119769297	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	aa46887737dcae46
+24	1117	7441633120123073	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	3a585b65de96f8d6
+1	1249	7441633121462595	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	2fa93187da6706ca
+19	1171	7441633120276940	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	bd1e83e98cbc40e7
+30	1250	7441633121462595	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	e50d77c859f0b0f0
+15	1343	7441633122574676	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	fdec30d2f0082973
+1405	1547	7441633124270499	C:/Users/Maxi/TDMT-2C-PYO-N-A-24 Primer-parcial-Acosta-Maximiliano/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/1xxm2p2t/obj/armeabi-v7a/libgame.so	e7d6d8775163e759
+100	383	7441738643936059	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	afdcfa160b892165
+384	823	7441738647641488	C:/Users/Maxi/TDMT-2C-PYO-N-A-24 Primer-parcial-Acosta-Maximiliano/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/1xxm2p2t/obj/armeabi-v7a/libswappywrapper.so	df7e8c43b54b4065
+94	1204	7441738651315834	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	3a585b65de96f8d6
+31	1269	7441738651881159	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	aa46887737dcae46
+89	1366	7441738652521304	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	bd1e83e98cbc40e7
+84	1559	7441738655337125	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	e50d77c859f0b0f0
+54	1804	7441738657197788	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	2fa93187da6706ca
+40	2073	7441738660478474	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	fdec30d2f0082973
+11	2448	7441738664588636	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	efef635d17926591
+2448	2608	7441738665775027	C:/Users/Maxi/TDMT-2C-PYO-N-A-24 Primer-parcial-Acosta-Maximiliano/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/1xxm2p2t/obj/armeabi-v7a/libgame.so	e7d6d8775163e759
